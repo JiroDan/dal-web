@@ -1,4 +1,4 @@
-/*
+/* 
  * Copyright 2018 DAL Solutions.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,17 +14,4 @@
  * limitations under the License.
  */
 
-import {Component, OnInit} from '@angular/core';
 
-@Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
-})
-export class AppComponent implements OnInit {
-
-    constructor() {}
-
-    ngOnInit() {
-    }
-}
