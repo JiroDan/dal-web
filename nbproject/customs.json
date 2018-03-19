@@ -1,5 +1,6 @@
 {
     "elements": {
+        "app-root": {},
         "app-blog": {}
     },
     "attributes": {}
