@@ -1,6 +1,7 @@
 {
     "elements": {
         "app-root": {},
+        "router-outlet": {},
         "app-blog": {}
     },
     "attributes": {}

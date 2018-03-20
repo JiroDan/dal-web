@@ -19,6 +19,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {RouterModule, Routes} from '@angular/router';
+
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
@@ -27,14 +29,28 @@ import {DialogModule} from 'primeng/dialog';
 import {AppComponent} from './app.component';
 import {BlogEntryComponent} from './modules/blog-entry/blog-entry.component';
 import {BlogComponent} from './modules/blog/blog.component';
+import {HomeComponent} from './modules/home/home.component';
+import {PageNotFoundComponent} from './modules/404/page-not-found.component';
+
+const appRoutes: Routes = [
+    {path: 'home', component: HomeComponent},
+    {path: 'blog', component: BlogComponent},
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
+    {path: '**', component: PageNotFoundComponent}
+];
 
 @NgModule({
     declarations: [
         AppComponent,
         BlogEntryComponent,
-        BlogComponent
+        BlogComponent,
+        HomeComponent,
+        PageNotFoundComponent
     ],
     imports: [
+        RouterModule.forRoot(
+            appRoutes, {enableTracing: true}
+        ),
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
